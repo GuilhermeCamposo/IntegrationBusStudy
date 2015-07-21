@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ComIbmCompute.msgnode="ComIbmCompute.msgnode" xmlns:ComIbmMQInput.msgnode="ComIbmMQInput.msgnode" xmlns:ComIbmRoute.msgnode="ComIbmRoute.msgnode" xmlns:ComIbmTrace.msgnode="ComIbmTrace.msgnode" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:eflow="http://www.ibm.com/wbi/2005/eflow" xmlns:utility="http://www.ibm.com/wbi/2005/eflow_utility" nsURI="dbTranslatorFlow.msgflow"
+    nsPrefix="dbTranslatorFlow.msgflow">
+  <eClassifiers xmi:type="eflow:FCMComposite" name="FCMComposite_1">
+    <eSuperTypes href="http://www.ibm.com/wbi/2005/eflow#//FCMBlock"/>
+    <translation xmi:type="utility:TranslatableString" key="dbTranslatorFlow" bundleName="dbTranslatorFlow" pluginId="goodbooze-dbtranslator"/>
+    <colorGraphic16 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/goodbooze-dbtranslator/icons/full/obj16/dbTranslatorFlow.gif"/>
+    <colorGraphic32 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/goodbooze-dbtranslator/icons/full/obj30/dbTranslatorFlow.gif"/>
+    <composition>
+      <nodes xmi:type="ComIbmMQInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_3" location="71,255" queueName="GOODBOOZE.DBTRANSLATOR.INPUT" messageDomainProperty="XMLNSC" transactionMode="no">
+        <translation xmi:type="utility:ConstantString" string="GOODBOOZE.DBTRANSLATOR.INPUT"/>
+      </nodes>
+      <nodes xmi:type="ComIbmTrace.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_6" location="724,77" destination="file" filePath="C:\log\mq_testing_log.log" pattern="==================================================&#xD;&#xA; ${ExceptionList}&#xD;&#xA;==================================================">
+        <translation xmi:type="utility:ConstantString" string="Log Exception"/>
+      </nodes>
+      <nodes xmi:type="ComIbmTrace.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="565,324" destination="file" filePath="C:\log\mq_testing_log.log" pattern="==================================================&#xD;&#xA;Save Entry&#xD;&#xA;==================================================">
+        <translation xmi:type="utility:ConstantString" string="Trace2"/>
+      </nodes>
+      <nodes xmi:type="ComIbmRoute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="376,251" distributionMode="first">
+        <outTerminals terminalNodeID="SaveEntry" dynamic="true" label="SaveEntry"/>
+        <outTerminals terminalNodeID="SaveSupplierOrder" dynamic="true" label="SaveSupplierOrder"/>
+        <outTerminals terminalNodeID="GetProductSupplier" dynamic="true" label="GetProductSupplier"/>
+        <translation xmi:type="utility:ConstantString" string="Route"/>
+        <filterTable filterPattern="boolean($Root/XMLNSC/Sav:SaveEntryRequest)" routingOutputTerminal="SaveEntry"/>
+        <filterTable filterPattern="boolean($Root/XMLNSC/Sav1:SaveSupplierOrderRequest)" routingOutputTerminal="SaveSupplierOrder"/>
+        <filterTable filterPattern="boolean($Root/XMLNSC/get:getProductSupplierRequest)" routingOutputTerminal="GetProductSupplier"/>
+        <nsMappingTable nsPrefix="Sav" namespace="http://goodbooze.com/ordermanager/dbtranslator/saveentry"/>
+        <nsMappingTable nsPrefix="Sav1" namespace="http://goodbooze.com/ordermanager/dbtranslator/savesupplierorder"/>
+        <nsMappingTable nsPrefix="get" namespace="http://goodbooze.com/ordermanager/dbtranslator/getproductsupplier/request"/>
+      </nodes>
+      <nodes xmi:type="ComIbmTrace.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_7" location="559,402" destination="file" filePath="C:\log\mq_testing_log.log" pattern="==================================================&#xD;&#xA;Save Supplier&#xD;&#xA;==================================================">
+        <translation xmi:type="utility:ConstantString" string="log"/>
+      </nodes>
+      <nodes xmi:type="ComIbmTrace.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_8" location="483,482" destination="file" filePath="C:\log\mq_testing_log.log" pattern="==================================================&#xD;&#xA;Shitty Code Bro&#xD;&#xA;==================================================">
+        <translation xmi:type="utility:ConstantString" string="log1"/>
+      </nodes>
+      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_9" location="660,211" dataSource="PostgreDS" computeExpression="esql://routine/#dbTranslatorFlow_Compute.Main">
+        <translation xmi:type="utility:ConstantString" string="SaveEntry"/>
+      </nodes>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_6" targetNode="FCMComposite_1_6" sourceNode="FCMComposite_1_3" sourceTerminalName="OutTerminal.failure" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_4" targetNode="FCMComposite_1_2" sourceNode="FCMComposite_1_3" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_7" targetNode="FCMComposite_1_7" sourceNode="FCMComposite_1_2" sourceTerminalName="SaveSupplierOrder" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_8" targetNode="FCMComposite_1_6" sourceNode="FCMComposite_1_2" sourceTerminalName="OutTerminal.failure" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_10" targetNode="FCMComposite_1_1" sourceNode="FCMComposite_1_2" sourceTerminalName="SaveEntry" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_13" targetNode="FCMComposite_1_8" sourceNode="FCMComposite_1_2" sourceTerminalName="OutTerminal.default" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_1" targetNode="FCMComposite_1_9" sourceNode="FCMComposite_1_1" sourceTerminalName="OutTerminal.out" targetTerminalName="InTerminal.in"/>
+      <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_2" targetNode="FCMComposite_1_6" sourceNode="FCMComposite_1_9" sourceTerminalName="OutTerminal.failure" targetTerminalName="InTerminal.in"/>
+    </composition>
+    <propertyOrganizer/>
+    <stickyBoard/>
+  </eClassifiers>
+</ecore:EPackage>

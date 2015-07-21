@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p:SaveEntryRequest xmlns:p="http://goodbooze.com/ordermanager/dbtranslator/saveentry" xmlns:tns="http://goodbooze.com/orderManager/types" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://goodbooze.com/ordermanager/dbtranslator/saveentry saveEntry.xsd ">
+  <p:Entry>
+    <tns:entryId>0</tns:entryId>
+    <tns:insertDate>2001-12-31T12:00:00</tns:insertDate>
+    <tns:processDate>2001-12-31T12:00:00</tns:processDate>
+    <tns:storeOrderList>
+      <tns:storeOrder>
+        <tns:status>tns:status</tns:status>
+        <tns:insertDate>2001-01-01</tns:insertDate>
+        <tns:id>0</tns:id>
+        <tns:updateDate>2001-01-01</tns:updateDate>
+        <tns:itemStoreOrderList>
+          <tns:itemStore>
+            <tns:id>0</tns:id>
+            <tns:quantity>0</tns:quantity>
+            <tns:product>
+              <tns:internalId>0</tns:internalId>
+              <tns:name>tns:name</tns:name>
+              <tns:productSupplierId>0</tns:productSupplierId>
+            </tns:product>
+          </tns:itemStore>
+        </tns:itemStoreOrderList>
+        <tns:store>
+          <tns:id>0</tns:id>
+          <tns:name>tns:name</tns:name>
+        </tns:store>
+      </tns:storeOrder>
+    </tns:storeOrderList>
+  </p:Entry>
+</p:SaveEntryRequest>

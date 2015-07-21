@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<xmi:XMI xmlns:datamodelversion="http://www.ibm.com/com.ibm.datatools.core/model/data/1.3.0.0" xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SQLConstraints="http:///org/eclipse/datatools/modelbase/sql/constraints.ecore" xmlns:SQLDataTypes="http:///org/eclipse/datatools/modelbase/sql/datatypes.ecore" xmlns:SQLSchema="http:///org/eclipse/datatools/modelbase/sql/schema.ecore" xmlns:SQLTables="http:///org/eclipse/datatools/modelbase/sql/tables.ecore">
+  <SQLSchema:Database xmi:id="__LcI4SP9EeWaLol8XoH9oQ" name="integration_training" vendor="MySql" version="4.0" schemas="__MAwoCP9EeWaLol8XoH9oQ">
+    <eAnnotations xmi:id="__LcI4iP9EeWaLol8XoH9oQ" source="ConnectionURI">
+      <details xmi:id="__LcI4yP9EeWaLol8XoH9oQ" key="ConnectionKey" value="Integration_Training_Database"/>
+    </eAnnotations>
+  </SQLSchema:Database>
+  <SQLSchema:Schema xmi:id="__MAwoCP9EeWaLol8XoH9oQ" name="integration_training" indices="__MAwoSP9EeWaLol8XoH9oQ __MB-wCP9EeWaLol8XoH9oQ __MB-wiP9EeWaLol8XoH9oQ __MCl0SP9EeWaLol8XoH9oQ __MCl0yP9EeWaLol8XoH9oQ __MDM6CP9EeWaLol8XoH9oQ __MDz8CP9EeWaLol8XoH9oQ __MDz8iP9EeWaLol8XoH9oQ __MFCECP9EeWaLol8XoH9oQ __MFCFyP9EeWaLol8XoH9oQ" tables="__MFpICP9EeWaLol8XoH9oQ __MBXsSP9EeWaLol8XoH9oQ __MB-xCP9EeWaLol8XoH9oQ __MDM4CP9EeWaLol8XoH9oQ __MFpKCP9EeWaLol8XoH9oQ __MDM6iP9EeWaLol8XoH9oQ __MGQMCP9EeWaLol8XoH9oQ __MEbASP9EeWaLol8XoH9oQ __MFCEiP9EeWaLol8XoH9oQ" database="__LcI4SP9EeWaLol8XoH9oQ"/>
+  <SQLConstraints:Index xmi:id="__MAwoSP9EeWaLol8XoH9oQ" name="FK_c25eam30r7m3ii9bde8if5jqs" Schema="__MAwoCP9EeWaLol8XoH9oQ" table="__MBXsSP9EeWaLol8XoH9oQ">
+    <members xmi:id="__MBXsCP9EeWaLol8XoH9oQ" column="__MBXtiP9EeWaLol8XoH9oQ"/>
+  </SQLConstraints:Index>
+  <SQLTables:PersistentTable xmi:id="__MBXsSP9EeWaLol8XoH9oQ" name="itemstoreorder" schema="__MAwoCP9EeWaLol8XoH9oQ" index="__MAwoSP9EeWaLol8XoH9oQ __MB-wCP9EeWaLol8XoH9oQ">
+    <columns xmi:id="__MBXsiP9EeWaLol8XoH9oQ" name="id" description="" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="__MBXsyP9EeWaLol8XoH9oQ" name="BIGINT" primitiveType="BIGINT"/>
+    </columns>
+    <columns xmi:id="__MBXtCP9EeWaLol8XoH9oQ" name="quantity" description="" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="__MBXtSP9EeWaLol8XoH9oQ" name="BIGINT" primitiveType="BIGINT"/>
+    </columns>
+    <columns xmi:id="__MBXtiP9EeWaLol8XoH9oQ" name="product_id" description="">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="__MBXtyP9EeWaLol8XoH9oQ" name="BIGINT" primitiveType="BIGINT"/>
+    </columns>
+    <columns xmi:id="__MBXuCP9EeWaLol8XoH9oQ" name="storeOrder_id" description="">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="__MBXuSP9EeWaLol8XoH9oQ" name="BIGINT" primitiveType="BIGINT"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="__MBXuiP9EeWaLol8XoH9oQ" name="PRIMARY" members="__MBXsiP9EeWaLol8XoH9oQ"/>
+  </SQLTables:PersistentTable>
+  <SQLConstraints:Index xmi:id="__MB-wCP9EeWaLol8XoH9oQ" name="FK_bf1kv6wj8b2ob1ymexliu61ex" Schema="__MAwoCP9EeWaLol8XoH9oQ" table="__MBXsSP9EeWaLol8XoH9oQ">
+    <members xmi:id="__MB-wSP9EeWaLol8XoH9oQ" column="__MBXuCP9EeWaLol8XoH9oQ"/>
+  </SQLConstraints:Index>
+  <SQLConstraints:Index xmi:id="__MB-wiP9EeWaLol8XoH9oQ" name="FK_3vgofp44wi5iou8quhj79n4op" Schema="__MAwoCP9EeWaLol8XoH9oQ" table="__MB-xCP9EeWaLol8XoH9oQ">
+    <members xmi:id="__MB-wyP9EeWaLol8XoH9oQ" column="__MB-ySP9EeWaLol8XoH9oQ"/>
+  </SQLConstraints:Index>
+  <SQLTables:PersistentTable xmi:id="__MB-xCP9EeWaLol8XoH9oQ" name="itemsupplierorder" schema="__MAwoCP9EeWaLol8XoH9oQ" index="__MB-wiP9EeWaLol8XoH9oQ __MCl0SP9EeWaLol8XoH9oQ">
+    <columns xmi:id="__MB-xSP9EeWaLol8XoH9oQ" name="id" description="" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="__MB-xiP9EeWaLol8XoH9oQ" name="BIGINT" primitiveType="BIGINT"/>
+    </columns>
+    <columns xmi:id="__MB-xyP9EeWaLol8XoH9oQ" name="quantity" description="" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="__MB-yCP9EeWaLol8XoH9oQ" name="BIGINT" primitiveType="BIGINT"/>
+    </columns>
+    <columns xmi:id="__MB-ySP9EeWaLol8XoH9oQ" name="product_id" description="">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="__MB-yiP9EeWaLol8XoH9oQ" name="BIGINT" primitiveType="BIGINT"/>
+    </columns>
+    <columns xmi:id="__MB-yyP9EeWaLol8XoH9oQ" name="supplierOrder_id" description="">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="__MB-zCP9EeWaLol8XoH9oQ" name="BIGINT" primitiveType="BIGINT"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="__MCl0CP9EeWaLol8XoH9oQ" name="PRIMARY" members="__MB-xSP9EeWaLol8XoH9oQ"/>
+  </SQLTables:PersistentTable>
+  <SQLConstraints:Index xmi:id="__MCl0SP9EeWaLol8XoH9oQ" name="FK_a82rico811p941km64sekjyky" Schema="__MAwoCP9EeWaLol8XoH9oQ" table="__MB-xCP9EeWaLol8XoH9oQ">
+    <members xmi:id="__MCl0iP9EeWaLol8XoH9oQ" column="__MB-yyP9EeWaLol8XoH9oQ"/>
+  </SQLConstraints:Index>
+  <SQLConstraints:Index xmi:id="__MCl0yP9EeWaLol8XoH9oQ" name="FK_rs36j88onyhh1iunlr6qthvj6" Schema="__MAwoCP9EeWaLol8XoH9oQ" table="__MDM4CP9EeWaLol8XoH9oQ">
+    <members xmi:id="__MCl1CP9EeWaLol8XoH9oQ" column="__MDM5SP9EeWaLol8XoH9oQ"/>
+  </SQLConstraints:Index>
+  <SQLTables:PersistentTable xmi:id="__MDM4CP9EeWaLol8XoH9oQ" name="product" schema="__MAwoCP9EeWaLol8XoH9oQ" index="__MCl0yP9EeWaLol8XoH9oQ">
+    <columns xmi:id="__MDM4SP9EeWaLol8XoH9oQ" name="id" description="" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="__MDM4iP9EeWaLol8XoH9oQ" name="BIGINT" primitiveType="BIGINT"/>
+    </columns>
+    <columns xmi:id="__MDM4yP9EeWaLol8XoH9oQ" name="name" description="">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="__MDM5CP9EeWaLol8XoH9oQ" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="255"/>
+    </columns>
+    <columns xmi:id="__MDM5SP9EeWaLol8XoH9oQ" name="supplier_id" description="">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="__MDM5iP9EeWaLol8XoH9oQ" name="BIGINT" primitiveType="BIGINT"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="__MDM5yP9EeWaLol8XoH9oQ" name="PRIMARY" members="__MDM4SP9EeWaLol8XoH9oQ"/>
+  </SQLTables:PersistentTable>
+  <SQLConstraints:Index xmi:id="__MDM6CP9EeWaLol8XoH9oQ" name="FK_a76l0nplw3ymctjns8186nc74" Schema="__MAwoCP9EeWaLol8XoH9oQ" table="__MDM6iP9EeWaLol8XoH9oQ">
+    <members xmi:id="__MDM6SP9EeWaLol8XoH9oQ" column="__MDM8yP9EeWaLol8XoH9oQ"/>
+  </SQLConstraints:Index>
+  <SQLTables:PersistentTable xmi:id="__MDM6iP9EeWaLol8XoH9oQ" name="storeorder" schema="__MAwoCP9EeWaLol8XoH9oQ" index="__MDM6CP9EeWaLol8XoH9oQ __MDz8CP9EeWaLol8XoH9oQ">
+    <columns xmi:id="__MDM6yP9EeWaLol8XoH9oQ" name="id" description="" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="__MDM7CP9EeWaLol8XoH9oQ" name="BIGINT" primitiveType="BIGINT"/>
+    </columns>
+    <columns xmi:id="__MDM7SP9EeWaLol8XoH9oQ" name="insertDate" description="">
+      <containedType xsi:type="SQLDataTypes:DateDataType" xmi:id="__MDM7iP9EeWaLol8XoH9oQ" name="DATE" primitiveType="DATE"/>
+    </columns>
+    <columns xmi:id="__MDM7yP9EeWaLol8XoH9oQ" name="status" description="">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="__MDM8CP9EeWaLol8XoH9oQ" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="255"/>
+    </columns>
+    <columns xmi:id="__MDM8SP9EeWaLol8XoH9oQ" name="updateDate" description="">
+      <containedType xsi:type="SQLDataTypes:DateDataType" xmi:id="__MDM8iP9EeWaLol8XoH9oQ" name="DATE" primitiveType="DATE"/>
+    </columns>
+    <columns xmi:id="__MDM8yP9EeWaLol8XoH9oQ" name="entry_id" description="">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="__MDM9CP9EeWaLol8XoH9oQ" name="BIGINT" primitiveType="BIGINT"/>
+    </columns>
+    <columns xmi:id="__MDM9SP9EeWaLol8XoH9oQ" name="store_id" description="">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="__MDM9iP9EeWaLol8XoH9oQ" name="BIGINT" primitiveType="BIGINT"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="__MDM9yP9EeWaLol8XoH9oQ" name="PRIMARY" members="__MDM6yP9EeWaLol8XoH9oQ"/>
+  </SQLTables:PersistentTable>
+  <SQLConstraints:Index xmi:id="__MDz8CP9EeWaLol8XoH9oQ" name="FK_aaovgg6775lnhnup2xls4vl02" Schema="__MAwoCP9EeWaLol8XoH9oQ" table="__MDM6iP9EeWaLol8XoH9oQ">
+    <members xmi:id="__MDz8SP9EeWaLol8XoH9oQ" column="__MDM9SP9EeWaLol8XoH9oQ"/>
+  </SQLConstraints:Index>
+  <SQLConstraints:Index xmi:id="__MDz8iP9EeWaLol8XoH9oQ" name="FK_9efbgrwxpapel7gwt5gqddvqn" Schema="__MAwoCP9EeWaLol8XoH9oQ" table="__MEbASP9EeWaLol8XoH9oQ">
+    <members xmi:id="__MEbACP9EeWaLol8XoH9oQ" column="__MEbDCP9EeWaLol8XoH9oQ"/>
+  </SQLConstraints:Index>
+  <SQLTables:PersistentTable xmi:id="__MEbASP9EeWaLol8XoH9oQ" name="supplierorder" schema="__MAwoCP9EeWaLol8XoH9oQ" index="__MDz8iP9EeWaLol8XoH9oQ">
+    <columns xmi:id="__MEbAiP9EeWaLol8XoH9oQ" name="id" description="" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="__MEbAyP9EeWaLol8XoH9oQ" name="BIGINT" primitiveType="BIGINT"/>
+    </columns>
+    <columns xmi:id="__MEbBCP9EeWaLol8XoH9oQ" name="insertDate" description="">
+      <containedType xsi:type="SQLDataTypes:DateDataType" xmi:id="__MEbBSP9EeWaLol8XoH9oQ" name="DATE" primitiveType="DATE"/>
+    </columns>
+    <columns xmi:id="__MEbBiP9EeWaLol8XoH9oQ" name="orderNumber" description="" nullable="false">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="__MEbByP9EeWaLol8XoH9oQ" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="255"/>
+    </columns>
+    <columns xmi:id="__MEbCCP9EeWaLol8XoH9oQ" name="status" description="">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="__MEbCSP9EeWaLol8XoH9oQ" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="255"/>
+    </columns>
+    <columns xmi:id="__MEbCiP9EeWaLol8XoH9oQ" name="updateDate" description="">
+      <containedType xsi:type="SQLDataTypes:DateDataType" xmi:id="__MEbCyP9EeWaLol8XoH9oQ" name="DATE" primitiveType="DATE"/>
+    </columns>
+    <columns xmi:id="__MEbDCP9EeWaLol8XoH9oQ" name="supplier_id" description="">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="__MEbDSP9EeWaLol8XoH9oQ" name="BIGINT" primitiveType="BIGINT"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="__MEbDiP9EeWaLol8XoH9oQ" name="PRIMARY" members="__MEbAiP9EeWaLol8XoH9oQ"/>
+  </SQLTables:PersistentTable>
+  <SQLConstraints:Index xmi:id="__MFCECP9EeWaLol8XoH9oQ" name="FK_pt1g41yfwqaxmolj0y2f8lb4e" Schema="__MAwoCP9EeWaLol8XoH9oQ" table="__MFCEiP9EeWaLol8XoH9oQ">
+    <members xmi:id="__MFCESP9EeWaLol8XoH9oQ" column="__MFCFSP9EeWaLol8XoH9oQ"/>
+  </SQLConstraints:Index>
+  <SQLTables:PersistentTable xmi:id="__MFCEiP9EeWaLol8XoH9oQ" name="supplierorder_storeorder" schema="__MAwoCP9EeWaLol8XoH9oQ" index="__MFCECP9EeWaLol8XoH9oQ __MFCFyP9EeWaLol8XoH9oQ">
+    <columns xmi:id="__MFCEyP9EeWaLol8XoH9oQ" name="supplierOrders_id" description="" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="__MFCFCP9EeWaLol8XoH9oQ" name="BIGINT" primitiveType="BIGINT"/>
+    </columns>
+    <columns xmi:id="__MFCFSP9EeWaLol8XoH9oQ" name="storeOrders_id" description="" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="__MFCFiP9EeWaLol8XoH9oQ" name="BIGINT" primitiveType="BIGINT"/>
+    </columns>
+  </SQLTables:PersistentTable>
+  <SQLConstraints:Index xmi:id="__MFCFyP9EeWaLol8XoH9oQ" name="FK_mbi33ho6c7i7rb3bote732io5" Schema="__MAwoCP9EeWaLol8XoH9oQ" table="__MFCEiP9EeWaLol8XoH9oQ">
+    <members xmi:id="__MFCGCP9EeWaLol8XoH9oQ" column="__MFCEyP9EeWaLol8XoH9oQ"/>
+  </SQLConstraints:Index>
+  <SQLTables:PersistentTable xmi:id="__MFpICP9EeWaLol8XoH9oQ" name="entry" schema="__MAwoCP9EeWaLol8XoH9oQ">
+    <columns xmi:id="__MFpISP9EeWaLol8XoH9oQ" name="id" description="" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="__MFpIiP9EeWaLol8XoH9oQ" name="BIGINT" primitiveType="BIGINT"/>
+    </columns>
+    <columns xmi:id="__MFpIyP9EeWaLol8XoH9oQ" name="insertDate" description="">
+      <containedType xsi:type="SQLDataTypes:DateDataType" xmi:id="__MFpJCP9EeWaLol8XoH9oQ" name="DATE" primitiveType="DATE"/>
+    </columns>
+    <columns xmi:id="__MFpJSP9EeWaLol8XoH9oQ" name="processDate" description="">
+      <containedType xsi:type="SQLDataTypes:DateDataType" xmi:id="__MFpJiP9EeWaLol8XoH9oQ" name="DATE" primitiveType="DATE"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="__MFpJyP9EeWaLol8XoH9oQ" name="PRIMARY" members="__MFpISP9EeWaLol8XoH9oQ"/>
+  </SQLTables:PersistentTable>
+  <SQLTables:PersistentTable xmi:id="__MFpKCP9EeWaLol8XoH9oQ" name="store" schema="__MAwoCP9EeWaLol8XoH9oQ">
+    <columns xmi:id="__MFpKSP9EeWaLol8XoH9oQ" name="id" description="" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="__MFpKiP9EeWaLol8XoH9oQ" name="BIGINT" primitiveType="BIGINT"/>
+    </columns>
+    <columns xmi:id="__MFpKyP9EeWaLol8XoH9oQ" name="name" description="">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="__MFpLCP9EeWaLol8XoH9oQ" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="255"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="__MFpLSP9EeWaLol8XoH9oQ" name="PRIMARY" members="__MFpKSP9EeWaLol8XoH9oQ"/>
+  </SQLTables:PersistentTable>
+  <SQLTables:PersistentTable xmi:id="__MGQMCP9EeWaLol8XoH9oQ" name="supplier" schema="__MAwoCP9EeWaLol8XoH9oQ">
+    <columns xmi:id="__MGQMSP9EeWaLol8XoH9oQ" name="id" description="" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="__MGQMiP9EeWaLol8XoH9oQ" name="BIGINT" primitiveType="BIGINT"/>
+    </columns>
+    <columns xmi:id="__MGQMyP9EeWaLol8XoH9oQ" name="name" description="">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="__MGQNCP9EeWaLol8XoH9oQ" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="255"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="__MGQNSP9EeWaLol8XoH9oQ" name="PRIMARY" members="__MGQMSP9EeWaLol8XoH9oQ"/>
+  </SQLTables:PersistentTable>
+</xmi:XMI>

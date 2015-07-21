@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="orderManager"
+	targetNamespace="http://goodbooze.com/ordermanager/external"
+	xmlns:order="http://goodbooze.com/ordermanager/createorder" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:tns="http://goodbooze.com/ordermanager/external" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<wsdl:documentation>
+		<wsdl:appinfo source="WMQI_APPINFO">
+			<MRWSDLAppInfo imported="true">
+				<binding hasEncoding="false" imported="true" name="orderManagerSOAP"
+					originalBindingStyle="document" />
+			</MRWSDLAppInfo>
+		</wsdl:appinfo>
+	</wsdl:documentation>
+
+
+	<wsdl:types>
+		<xsd:schema xmlns="http://www.w3.org/2001/XMLSchema">
+			<import namespace="http://goodbooze.com/ordermanager/createorder"
+				schemaLocation="../createorder/createOrder.xsd" />
+		</xsd:schema>
+	</wsdl:types>
+
+
+	<wsdl:message name="CreateOrderRequest">
+		<wsdl:part element="order:CreateOrderRequest" name="parameters" />
+	</wsdl:message>
+
+	<wsdl:message name="CreateOrderResponse">
+		<wsdl:part element="order:CreateOrderResponse" name="parameters" />
+	</wsdl:message>
+
+	<wsdl:portType name="orderManager">
+		<wsdl:operation name="CreateOrder">
+			<wsdl:input message="tns:CreateOrderRequest" />
+			<wsdl:output message="tns:CreateOrderResponse" />
+		</wsdl:operation>
+	</wsdl:portType>
+
+	<wsdl:binding name="orderManagerSOAP" type="tns:orderManager">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="CreateOrder">
+			<soap:operation
+				soapAction="http://goodbooze.com/ordermanager/external/CreateOrder" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+
+	<wsdl:service name="orderManager">
+		<wsdl:port binding="tns:orderManagerSOAP" name="orderManagerSOAP">
+			<soap:address location="http://www.goodbooze.com/" />
+		</wsdl:port>
+	</wsdl:service>
+
+</wsdl:definitions>

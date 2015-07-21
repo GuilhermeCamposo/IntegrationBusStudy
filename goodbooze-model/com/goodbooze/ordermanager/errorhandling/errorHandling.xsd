@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://goodbooze.com/ordermanager/errorhandling">
+
+	<xsd:element name="ErrorHandling">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="OriginalMessage" type="xsd:string" />
+				<xsd:element name="ErrorCause" type="xsd:string" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+</xsd:schema>

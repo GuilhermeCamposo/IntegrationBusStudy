@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://goodbooze.com/ordermanager/dbtranslator/getproductsupplier/request"
+	xmlns:tns="http://goodbooze.com/ordermanager/createorder"
+	xmlns:model="http://goodbooze.com/orderManager/types"
+	elementFormDefault="qualified" >
+
+
+ <xs:import namespace="http://goodbooze.com/orderManager/types" schemaLocation="../../../types/types.xsd" />
+	
+	
+	<xs:element name="getProductSupplierRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="product" type="model:product" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>

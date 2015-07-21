@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" mainMap="true" targetNamespace="default" version="8.0.4.0" xmlns="http://www.ibm.com/2008/ccl/Mapping" xmlns:map="default">
+    <input path="/com/goodbooze/ordermanager/createorder/createOrder.xsd"/>
+    <output path="/com/goodbooze/ordermanager/createorder/createOrder.xsd"/>
+    <generation engine="xquery"/>
+    <mappingDeclaration name="soapChannelAdapterFlow_Mapping">
+        <input namespace="http://goodbooze.com/ordermanager/createorder" path="mb:msg(CreateOrderRequest,assembly,XMLNSC,Properties)"/>
+        <output namespace="http://goodbooze.com/ordermanager/createorder" path="mb:msg(CreateOrderResponse,assembly,XMLNSC,Properties)"/>
+        <move>
+            <input path="Properties"/>
+            <output path="Properties"/>
+        </move>
+        <assign value="Request Received">
+            <output path="CreateOrderResponse/Output"/>
+        </assign>
+    </mappingDeclaration>
+</mappingRoot>

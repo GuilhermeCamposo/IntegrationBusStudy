@@ -1,0 +1,22 @@
+
+
+Importing file: C:\Users\Guilherme\IBM\IntegrationToolkit90\workspace\goodbooze-model\com\goodbooze\orderManager\external\orderManager.wsdl
+
+Copying source WSDL orderManager.wsdl to orderManager.wsdl.
+The WSDL import will proceed with bindings orderManagerSOAP.
+Creating wsdl schema document for file:///C:/Users/Guilherme/IBM/IntegrationToolkit90/workspace/goodbooze-model/com/goodbooze/orderManager/external/orderManager.wsdl.
+Parsing wsdl binding {http://goodbooze.com/orderManager/external}orderManagerSOAP.
+Parsing wsdl binding input CreateOrder.
+Parsing wsdl binding output CreateOrder.
+Processing doc style for operation CreateOrder.
+Populating WSDL schema com/goodbooze/orderManager/external/orderManager.xsd.
+Creating file com/goodbooze/orderManager/external/orderManager.xsd in the workspace.
+Creating file /goodbooze-model/com/goodbooze/orderManager/external/createOrder/createOrder.xsd in the workspace.
+
+Elapsed time processing this message definition file: 0.356 seconds
+Number of warnings for this message definition file: 0
+
+
+Number of files processed: 1
+
+
